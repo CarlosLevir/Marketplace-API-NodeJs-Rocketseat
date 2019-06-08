@@ -9,7 +9,7 @@ module.exports = async (req, res, next) => {
 
   const parts = authHeader.split(' ');
 
-  if (!parts.lenght !== 2) return res.status(401).json({ error: 'Token format error' });
+  if (parts.length !== 2) return res.status(401).json({ error: 'Token format error' });
 
   const [, token] = parts;
 
